@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-// import DateTimePicker from 'react-datetime-picker';
-import ReactModal from 'react-modal'
+import Modal from '../../components/Modal'
 import { departments, states } from '../../utils/constants'
 import styles from './styles.module.css'
 
@@ -10,7 +8,6 @@ function Home() {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [dateOfBirth, setDateOfBirth] = useState(new Date())
-  // eslint-disable-next-line no-unused-vars
   const [startDate, setStartDate] = useState(new Date())
   const [street, setStreet] = useState('')
   const [city, setCity] = useState('')
@@ -19,11 +16,11 @@ function Home() {
   const [department, setDepartment] = useState('Sales')
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const handleOpenModal = () => {
+  const openModal = () => {
     setIsModalOpen(true)
   }
 
-  const handleCloseModal = () => {
+  const closeModal = () => {
     setIsModalOpen(false)
   }
 
@@ -43,142 +40,149 @@ function Home() {
     }
     employees.push(employee)
     localStorage.setItem('employees', JSON.stringify(employees))
-    handleOpenModal()
+    openModal()
   }
 
   return (
     <>
-      <div className={styles.title}>
-        <h1>HRnet</h1>
-      </div>
-      <div className={styles.container}>
-        <Link to="/employees-list">View Current Employees</Link>
-        <h2>Create Employee</h2>
-        <form onSubmit={saveEmployee}>
-          <label htmlFor="first-name">First Name</label>
+      <h1 className="title">Create Employee</h1>
+      <div className="container">
+        <form className={styles.create_employee_form} onSubmit={saveEmployee}>
+          <label htmlFor="first-name" className={styles.label}>
+            First Name
+          </label>
           <input
             type="text"
             id="first-name"
+            className={styles.input}
             value={firstName}
             onChange={(event) => setFirstName(event.target.value)}
           />
 
-          <label htmlFor="last-name">Last Name</label>
+          <label htmlFor="last-name" className={styles.label}>
+            Last Name
+          </label>
           <input
             type="text"
             id="last-name"
+            className={styles.input}
             value={lastName}
             onChange={(event) => setLastName(event.target.value)}
           />
 
-          <label htmlFor="date-of-birth">Date of Birth</label>
+          <label htmlFor="date-of-birth" className={styles.label}>
+            Date of Birth
+          </label>
           <input
             type="date"
             id="date-of-birth"
+            className={styles.input}
             value={dateOfBirth}
             onChange={(event) => setDateOfBirth(event.target.value)}
           />
-          {/* <DateTimePicker value={dateOfBirth} onChange={setDateOfBirth} /> */}
 
-          <label htmlFor="start-date">Start Date</label>
+          <label htmlFor="start-date" className={styles.label}>
+            Start Date
+          </label>
           <input
             type="date"
             id="start-date"
+            className={styles.input}
             value={startDate}
-            onChange={(event) => setDateOfBirth(event.target.value)}
+            onChange={(event) => setStartDate(event.target.value)}
           />
-          {/* <DateTimePicker value={startDate} onChange={setStartDate} /> */}
 
-          <fieldset className={styles.address}>
+          <fieldset className={styles.address_fieldset}>
             <legend>Address</legend>
 
-            <label htmlFor="street">Street</label>
+            <label htmlFor="street" className={styles.label}>
+              Street
+            </label>
             <input
-              id="street"
               type="text"
+              id="street"
+              className={styles.input}
               value={street}
               onChange={(event) => setStreet(event.target.value)}
             />
 
-            <label htmlFor="city">City</label>
+            <label htmlFor="city" className={styles.label}>
+              City
+            </label>
             <input
-              id="city"
               type="text"
+              id="city"
+              className={styles.input}
               value={city}
               onChange={(event) => setCity(event.target.value)}
             />
 
-            <label htmlFor="state">State</label>
+            <label htmlFor="state" className={styles.label}>
+              State
+            </label>
             <select
               name="state"
               id="state"
+              className={styles.select}
               value={state}
               onChange={(event) => setState(event.target.value)}
             >
-              {states.map((stateElt) => (
+              {states.map((stateElt, index) => (
                 <option
-                  key={stateElt.abbreviation}
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={`${stateElt.abbreviation}-${index}`}
                   value={stateElt.abbreviation}
                 >
-                  {state.name}
+                  {stateElt.name}
                 </option>
               ))}
             </select>
 
-            <label htmlFor="zip-code">Zip Code</label>
+            <label htmlFor="zip-code" className={styles.label}>
+              Zip Code
+            </label>
             <input
-              id="zip-code"
               type="number"
+              id="zip-code"
+              className={styles.input}
               value={zipCode}
               onChange={(event) => setZipCode(event.target.value)}
             />
           </fieldset>
 
-          <label htmlFor="department">Department</label>
+          <label htmlFor="department" className={styles.label}>
+            Department
+          </label>
           <select
             name="department"
             id="department"
+            className={styles.select}
             value={department}
             onChange={(event) => setDepartment(event.target.value)}
           >
             {departments.map((departmentElt, index) => (
               // eslint-disable-next-line react/no-array-index-key
               <option key={`${departmentElt}-${index}`} value={departmentElt}>
-                {department}
+                {departmentElt}
               </option>
             ))}
           </select>
 
-          <button className={styles.submit} type="submit">
+          <button className={styles.submit_button} type="submit">
             Save
           </button>
         </form>
       </div>
       {isModalOpen && (
-        <ReactModal
+        <Modal
           isOpen={isModalOpen}
-          onRequestClose={handleCloseModal}
-          contentLabel="Modal"
+          onRequestClose={closeModal}
+          showClose
+          fadeDuration={200}
+          fadeDelay={1.0}
         >
-          <div className={styles.modal}>
-            <div className={styles.modalContent}>
-              <button
-                className={styles.modalClose}
-                onClick={() => setIsModalOpen(false)}
-                onKeyDown={(event) => {
-                  if (event.key === 'Enter' || event.key === ' ') {
-                    setIsModalOpen(false)
-                  }
-                }}
-                type="button"
-                tabIndex={0}
-              >
-                &times;
-              </button>
-              <p>Employee Created!</p>
-            </div>
-          </div>
-        </ReactModal>
+          <p>Employee Created!</p>
+        </Modal>
       )}
     </>
   )

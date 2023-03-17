@@ -1,10 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import ReactModal from 'react-modal'
 import App from './components/App'
-import './index.css'
-
-ReactModal.setAppElement('#root')
+import './main.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

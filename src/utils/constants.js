@@ -4,7 +4,7 @@ const departments = [
   'Engineering',
   'Human Resources',
   'Legal',
-];
+]
 
 const states = [
   {
@@ -243,6 +243,6 @@ const states = [
     name: 'Wyoming',
     abbreviation: 'WY',
   },
-];
+]
 
-export { departments, states };
+export { departments, states }
