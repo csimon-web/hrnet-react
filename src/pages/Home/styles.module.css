@@ -21,12 +21,16 @@
     border-radius: 3px;
 }
 
-.submit_button{
+.submit_button {
     display: block;
     margin: 1rem auto;
     padding: 10px 30px;
     border-radius: 3px;
     background: #93ad18;
+}
+
+.modal_message {
+    text-align: center;
 }
 
 @media (min-width: 576px) {
