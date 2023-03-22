@@ -1,10 +1,13 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Modal } from '@christophe-simon/modal-library'
+import { EmployeeContext } from '../../contexts/EmployeeContext'
 import { departments, states } from '../../utils/constants'
 import styles from './styles.module.css'
 
 function Home() {
+  const { addEmployee } = useContext(EmployeeContext)
+
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [dateOfBirth, setDateOfBirth] = useState(new Date())
@@ -26,7 +29,6 @@ function Home() {
 
   const saveEmployee = (event) => {
     event.preventDefault()
-    const employees = JSON.parse(localStorage.getItem('employees')) || []
     const employee = {
       firstName,
       lastName,
@@ -38,8 +40,7 @@ function Home() {
       state,
       zipCode,
     }
-    employees.push(employee)
-    localStorage.setItem('employees', JSON.stringify(employees))
+    addEmployee(employee)
     openModal()
   }
 

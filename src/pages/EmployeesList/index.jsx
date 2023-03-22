@@ -1,17 +1,10 @@
 /* eslint-disable react/jsx-boolean-value */
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import DataTable from 'react-data-table-component'
-// import styles from './styles.module.css'
+import { EmployeeContext } from '../../contexts/EmployeeContext'
 
 function EmployeeList() {
-  const [employees, setEmployees] = useState([])
-
-  useEffect(() => {
-    const storedEmployees = JSON.parse(localStorage.getItem('employees'))
-    if (storedEmployees) {
-      setEmployees(storedEmployees)
-    }
-  }, [])
+  const { employees } = useContext(EmployeeContext)
 
   const columns = [
     { name: 'First Name', selector: (row) => row.firstName },
