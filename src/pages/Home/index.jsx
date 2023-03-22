@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react'
-import Modal from '../../components/Modal'
+import { Modal } from '@christophe-simon/modal-library'
 import { departments, states } from '../../utils/constants'
 import styles from './styles.module.css'
 
