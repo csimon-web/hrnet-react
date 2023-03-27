@@ -179,8 +179,8 @@ function Home() {
           isOpen={isModalOpen}
           onRequestClose={closeModal}
           showClose
-          fadeDuration={1000}
-          fadeDelay={1.0}
+          // fadeDuration={1000}
+          // fadeDelay={1.0}
         >
           <p className={styles.modal_message}>Employee Created!</p>
         </Modal>
