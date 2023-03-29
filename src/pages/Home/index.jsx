@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useContext, useState } from 'react'
-import { Modal } from '@christophe-simon/modal-library'
+import { Modal } from 'modals-for-react'
 import { EmployeeContext } from '../../contexts/EmployeeContext'
 import { departments, states } from '../../utils/constants'
 import styles from './styles.module.css'

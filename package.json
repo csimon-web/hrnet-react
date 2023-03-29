@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@christophe-simon/modal-library": "^0.1.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "modals-for-react": "^0.1.7",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-data-table-component": "^7.5.3",
