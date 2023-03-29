@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+<!-- PROJECT SHIELDS -->
+<!--
+*** This template uses markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url]
 
-## Available Scripts
+<!-- ABOUT THE PROJECT -->
 
-In the project directory, you can run:
+## About The Project
 
-### `npm start`
+[![HRNet Screenshot][product-screenshot]]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project was realized during my training as a javascript/react developer for a fictitious company wanting to update a jQuery-based application whose github repository is: https://github.com/OpenClassrooms-Student-Center/P12_Front-end.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This application had to be developed with React and use a state manager. As this project counts only 2 pages, I chose Context instead of Redux.
 
-### `npm test`
+### Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Markdown, Html, Css, Javascript
+- React, Context
+- Git, Github
+- VS Code
+- Love :)
 
-### `npm run build`
+<!-- GETTING STARTED -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To get a local copy up and running follow these simple steps.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Git
+- Npm
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+git clone https://github.com/christophe-simon/hrnetreact
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Go to the hrnetreact directory
+3. Install the dependencies
 
-## Learn More
+```sh
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Launch the project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm run start
+```
 
-### Code Splitting
+5. Open a browser at the url: http://localhost:3000/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- USAGE EXAMPLES -->
+<!--## Usage
 
-### Analyzing the Bundle Size
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+_For more examples, please refer to the [Documentation](https://example.com)_
+-->
 
-### Making a Progressive Web App
+<!-- CONTACT -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contact
 
-### Advanced Configuration
+Christophe Simon: [personnal website](https://www.csimon.info)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Project Link: [https://github.com/christophe-simon/hrnetreact](https://github.com/christophe-simon/hrnetreact)
 
-### Deployment
+<!-- ACKNOWLEDGEMENTS -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Acknowledgements
 
-### `npm run build` fails to minify
+- This readme version is a simplified version of this [github repository](https://github.com/othneildrew/Best-README-Template) by Othneildrew
+- This readme version is a customized version of this [github repository](https://github.com/NicolasBrondin/basic-readme-template) by NicolasBrondin
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/christophe-simon/hrnetreact.svg?style=flat-square
+[contributors-url]: https://github.com/christophe-simon/hrnetreact/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/christophe-simon/hrnetreact.svg?style=flat-square
+[forks-url]: https://github.com/christophe-simon/hrnetreact/network/members
+[stars-shield]: https://img.shields.io/github/stars/christophe-simon/hrnetreact.svg?style=flat-square
+[stars-url]: https://github.com/christophe-simon/hrnetreact/stargazers
+[issues-shield]: https://img.shields.io/github/issues/christophe-simon/hrnetreact.svg?style=flat-square
+[issues-url]: https://github.com/christophe-simon/hrnetreact/issues
+[product-screenshot]: docs/screenshot.jpg

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import logo from '../../assets/logo192.png'
+import logo from '../../assets/logo192.jpg'
 import styles from './styles.module.css'
 
 function NavBar() {
