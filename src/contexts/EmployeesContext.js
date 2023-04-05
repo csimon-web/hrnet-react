@@ -6,16 +6,20 @@ import React, {
   useEffect,
 } from 'react'
 import PropTypes from 'prop-types'
+import { defaultEmployees } from '../utils/constants'
 
-const EmployeeContext = createContext()
+const EmployeesContext = createContext()
 
-function EmployeeProvider({ children }) {
+function EmployeesProvider({ children }) {
   const [employees, setEmployees] = useState([])
 
   useEffect(() => {
     const storedEmployees = localStorage.getItem('employees')
     if (storedEmployees) {
       setEmployees(JSON.parse(storedEmployees))
+    } else {
+      setEmployees(defaultEmployees)
+      localStorage.setItem('employees', JSON.stringify(defaultEmployees))
     }
   }, [])
 
@@ -33,17 +37,17 @@ function EmployeeProvider({ children }) {
   )
 
   return (
-    <EmployeeContext.Provider value={value}>
+    <EmployeesContext.Provider value={value}>
       {children}
-    </EmployeeContext.Provider>
+    </EmployeesContext.Provider>
   )
 }
 
-EmployeeProvider.propTypes = {
+EmployeesProvider.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
 }
 
-export { EmployeeContext, EmployeeProvider }
+export { EmployeesContext, EmployeesProvider }

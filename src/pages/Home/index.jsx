@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useContext, useState } from 'react'
 import { Modal } from 'modals-for-react'
-import { EmployeeContext } from '../../contexts/EmployeeContext'
+import { EmployeesContext } from '../../contexts/EmployeesContext'
 import { departments, states } from '../../utils/constants'
 import styles from './styles.module.css'
 
 function Home() {
-  const { addEmployee } = useContext(EmployeeContext)
+  const { addEmployee } = useContext(EmployeesContext)
 
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
