@@ -1,37 +1,36 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .left_menu {
-    display: flex;
-    align-items: center;
-    height: 3rem;
+  display: flex;
+  align-items: center;
+  height: 3rem;
 }
 
 .logo_img {
-    width: 3rem;
-    height: 3rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .logo_name {
-    margin-left: 10px;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #596d0c
+  margin-left: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #596d0c;
 }
 
 .right_menu {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .nav_item {
-    display: block;
-
+  display: block;
 }
 
 .item_2 {
-    margin-left: 20px;
+  margin-left: 20px;
 }

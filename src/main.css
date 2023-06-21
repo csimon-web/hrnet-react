@@ -4,12 +4,13 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   background: #e9efd1;
 }
 
 #root {
-  background: #FFFFFF;
+  background: #ffffff;
   margin: 0 20px;
   padding: 20px;
 }
@@ -37,13 +38,10 @@ body {
   #root {
     margin: 0 40px;
   }
-
 }
 @media (min-width: 768px) {
-
 }
 @media (min-width: 992px) {
-
 }
 @media (min-width: 1200px) {
 }
